@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+
+	<title>Feedback</title>
+</head>
+	<style>
+		body{
+			background-color: lightblue;
+			font-family: Oswald;
+		}
+		h1, h4{
+			color: rgb(59, 158, 191);
+		}
+		#q1{
+			width: 800px;
+			height: 700px;
+		}
+		.navbar{
+			font-size: 20px;
+		}
+		.topnav{
+			width: 100%;
+		}
+		.search-container{
+			width: 50%;
+		}
+		.navbar ul li{
+			list-style: none;
+			display: inline-block;
+			margin: 0 20px;
+			position: relative;
+		}
+		.navbar ul li a{
+			text-decoration: none;
+			color: black;
+			text-transform: uppercase;
+		}
+		.navbar ul li::after{
+			content: '';
+			height: 3px;
+			width: 0;
+			background:rgb(59, 158, 191);
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			transition: 0.3s;
+		}
+		.navbar ul li:hover::after{
+			width: 100%;
+		}
+		.button{
+			width: 100%;
+			height: 40px;
+			border: none;
+			outline: none;
+			font-size: 16px;
+			background:rgb(59, 158, 191) ;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+		.button{
+			background: white;
+			color: rgb(59, 158, 191);
+			padding: 10px 15px;
+			font-weight: bolder;
+			font-size: 18px;
+			margin-top: 25px;
+			border-radius: 5px;
+			box-shadow: 6px 6px 29px -4px rgb(0, 0, 0, 0.75);
+		}
+
+	</style>
+
+<body>
+<center>
+
+	<!--Header-->
+	<nav class="navbar navbar-expand-sm bg-light">
+    <a class="navbar-brand" href="#"></a>
+	
+	<!-- Navigation Bar -->
+	<div class="topnav">
+  		<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+  			<li class="nav-item">
+    			<a class="nav-link" href="main.html">Home</a>
+  			</li>
+    		<li class="nav-item">
+    			<a class="nav-link" href="page1.html">First Quarter</a>
+  			</li>
+      		<li class="nav-item">
+    			<a class="nav-link" href="page2.html">Second Quarter</a>
+  			</li>
+      		<li class="nav-item">
+    			<a class="nav-link" href="page3.html">Third Quarter</a>
+  			</li> 
+  			<li class="nav-item">
+    			<a class="nav-link" href="page4.html">Feedback</a>
+  			</li> 
+		</ul>
+	</div>
+
+	<!-- Search Bar -->
+	<div class="search-container">
+		<form>
+			<input type="search" name="search" placeholder="Search" class="searchinput">
+			<button id="btn" type="submit" class="searchsub btn-info">Submit</button>
+		</form>
+	</div>
+	</nav>
+</nav>
+
+	<br><br>
+
+	<!-- Feedbacks -->
+	<h1>Have some feedbacks?</h1><br>
+	<h4>Put them here!</h4><br>
+	
+	<div class="container">	
+	<form class="form-group">
+	<div class="row">
+		<div class="col-md-6">
+			<p><b>First Name</b></p><input type="text" class="form-control" id="fn" placeholder="First Name" name="name">
+		</div>
+		<div class="col-md-6">
+			<p><b>Last Name</b></p>
+			<input type="text" class="form-control" placeholder="Last Name" class="form-control" name="ln"><br>
+		</div>
+		<div class="col-md-6">
+			<p><b>Contact Number</b></p>
+			<input type="text" class="form-control" placeholder="+63 9XX XXX XX XX" class="form-control" name="pswd">
+		</div>
+		<div class="col-md-6">
+			<p><b>Email</b></p>
+			<input type="text" class="form-control" placeholder="Email" class="form-control" name="email"><br>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12">
+			<textarea class="form-control" rows="4" id="comment" placeholder="Enter your message or requests here. Any project suggestions?"></textarea>
+		</div>
+	</div>
+
+	<div class="row">
+	<div class="col-md-12">
+			<div class="form-group">
+				<label for="sell"><b>Which quarter had the best work?</b></label>
+				<select class="form-control" id="sell">
+					<option>1st</option>
+					<option>2nd</option>
+					<option>3rd</option>
+				</select>
+			</div>
+	</div>
+	</div>
+	</form></div>
+	</div><br>
+
+	<a href="main.html" class="button" id="login" onclick="return leavePage()">Submit</a>
+
+	<script>
+ 				function leavePage() {
+    			var message = "Your feedback has been submitted! Return to main page.";
+    			if (confirm(message)) {
+     			// If user clicked "Ok", proceed to next page
+     			return true;
+    			} else {
+      			// If user clicked "Cancel", stay on current page
+      			return false;
+   				 }
+  				}
+			</script>
+</body>
+</html>
